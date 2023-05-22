@@ -16,25 +16,28 @@
         <h2>BLOG</h2>
         <div class="box-container">
         
-        @foreach ($blogs as $blog)
-            @if(count($blogs)>0)
+        @if(count($blogs)>0)
+            @foreach ($blogs as $blog)
             <div class="box">
                 <img class="image" alt="iniGambar" src="{{ asset ('storage/blogs/'.$blog->imagePath) }}">
             </div>
-            @else
-            <div class="box-container">
-                <div class="box">
-                    <img class="image" alt="iniGambar" src="https://www.pa4.com.br/wp-content/uploads/2021/08/WhatsApp-Image-2021-08-24-at-16.20.03.jpeg">
-                </div>
-                <div class="box">
-                    <img class="image" alt="iniGambar" src="https://bua.ub.ac.id/wp-content/uploads/2018/02/Banner-Pameran-Februari-6kali3-1024x512.jpg">
-                </div>
-                <div class="box">
-                    <img class="image" alt="iniGambar" src="http://www.umm.ac.id/files/image/Bazar%20Buku.jpg">
-                </div>
+            @endforeach
+        @endif
+        @if(count($blogs)==0)
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
             </div>
-            @endif
-        @endforeach
+
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
+            </div>
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
+            </div>
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
+            </div>
+        @endif
         </div>
         <div class="more">
             <a href="/blog" ><i class="fas fa-arrow-right fa-2x"></i></a>
@@ -44,25 +47,28 @@
     <div class="container-home">
         <h2>STORE</h2>
         <div class="box-container">
-        @foreach ($store as $stores)
-            @if(count($store)>0)
+        @if(count($store)>0)
+            @foreach ($store as $stores)
             <div class="store-homepage box">
                 <img class="image" alt="iniGambar" src="{{ asset ('storage/dashboard/'.$stores->imagePath) }}">
             </div>
-            @else
-            <div class="store-homepage box">
-                <img class="image" alt="iniGambar" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/store-logo-design-template-3ac57f780d1cae2a6d3a049f82c62437_screen.jpg?ts=1646205211">
-            </div>
-            <div class="store-homepage box">
-                <img class="image" alt="iniGambar" src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30142254/125-768x591.png">
-            </div>
-            <div class="store-homepage box">
-                <img class="image" alt="iniGambar" src="https://www.logolynx.com/images/logolynx/55/5513135efd5feb51500074c68b2b32d5.jpeg">
-            </div>
-        </div>
+            @endforeach
         @endif
-        @endforeach
-        
+        @if(count($store)==0)
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="{{ asset('/storage/store.jpg')}}">
+            </div>
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="{{ asset('/storage/store.jpg')}}">
+            </div>
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="{{ asset('/storage/store.jpg')}}">
+            </div>
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="{{ asset('/storage/store.jpg')}}">
+            </div>
+        @endif
+        </div>
         <div class="more">
             <a href="/stores" ><i class="fas fa-arrow-right fa-2x"></i></a>
         </div>
@@ -81,7 +87,7 @@
         </div> 
     </div>
 
-    <div class="container-home">
+    <div class="box-contain container-home">
         <div class="box-container">
             <div class="banner box lft">
                 <h2 class="mark-container mark">Want to join UMKMAja?</h2>
@@ -91,7 +97,7 @@
             <div class="banner box rght">
                 <h2 class="mark-container mark">Want to find various UMKMs?</h2>
                 <p class="desc-banner">Helps you find various products from various UMKMs easily</p>
-                <a href="/store" class="center"><button class="btn-regist">BROWSE UMKMs!</button></a>
+                <a href="/stores" class="center"><button class="btn-regist">BROWSE UMKMs!</button></a>
             </div>
         </div>
     </div>

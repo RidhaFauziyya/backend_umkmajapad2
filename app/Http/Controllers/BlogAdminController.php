@@ -13,12 +13,7 @@ class BlogAdminController extends Controller
 {
     public function index()
     {
-        $idx = auth()->guard('admin')->user()->vendorId;
-        $dashboard = Admin::where('vendorId', $idx)->get()->toArray();
-        $id = $dashboard[0]['id'];
-        $dashboardx = Admin::find($id)->toArray();
-        $vendorId = $dashboardx['vendorId'];
-        $blogs = Blogs::where('vendorId', $vendorId)->paginate(12);
+        $blogs = Blogs::all();
         return view('admins.blog', compact('blogs'));
     }
 
@@ -65,12 +60,12 @@ class BlogAdminController extends Controller
             $imageName = $filenameUnik . '_' . time() . '.' . $extension; 
             Image::make($request->file('imagePath'))->resize(500, 700, function ($constraint) {
                 $constraint->aspectRatio();
-            })->save('storage/blogs/'.'/'.$imageName);
+            })->save('storage/blogs/'.$imageName);
             $blogs->imagePath = $imageName;
         } 
 
         $blogs->save();
-        return redirect('/blogAdmin')->with(['success' => 'Article uploaded successfully']);
+        return redirect('/blogAdmin')->with(['success' => 'Content uploaded successfully']);
     }
 
     /**

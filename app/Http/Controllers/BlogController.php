@@ -36,7 +36,7 @@ class BlogController extends Controller
     //Memanggil halaman blog kategori bazar
     public function bazar()
     {
-        $blogs = Blogs::where('category', 'Bazar')->paginate(9);
+        $blogs = Blogs::where('category', 'Bazar')->paginate(3);
         return view('blogs.blog-bazar', compact('blogs'));
     }
 

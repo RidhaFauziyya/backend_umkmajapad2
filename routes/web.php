@@ -38,7 +38,6 @@ Route::resource('product', 'App\Http\Controllers\ProductController');
 Route::resource('blogUMKM', 'App\Http\Controllers\BlogUMKMController');
 Route::resource('blogAdmin', 'App\Http\Controllers\BlogAdminController');
 
-
 //Route Halaman Store
 Route::get('/stores', [App\Http\Controllers\StoreController::class, 'index'])->name('stores');
 
@@ -107,7 +106,22 @@ Route::get('/electronic-store/{id}', [App\Http\Controllers\StoreController::clas
 Route::get('/beauty-store/{id}', [App\Http\Controllers\StoreController::class, 'storeDetail']);
 Route::get('/other-store/{id}', [App\Http\Controllers\StoreController::class, 'storeDetail']);
 
-Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
-Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
-Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
-Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+// Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
+// Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
+// Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+// Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+
+Route::get('/send', [App\Http\Controllers\HomeController::class, 'send'])->name('send.message');
+
+//Route Halaman Blog Detail
+Route::get('/store-details/{id}', [App\Http\Controllers\StoreAdminController::class, 'show']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

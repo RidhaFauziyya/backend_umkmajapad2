@@ -13,13 +13,10 @@ class BlogUMKMController extends Controller
 {
     public function index()
     {
-        $idx = auth()->guard('admin')->user()->vendorId;
-        $dashboard = Dashboard::where('vendorId', $idx)->get()->toArray();
-        $id = $dashboard[0]['id'];
-        $dashboardx = Dashboard::find($id)->toArray();
-        $vendorId = $dashboardx['vendorId'];
-        $blogs = Blogs::where('vendorId', $vendorId)->paginate(12);
-        return view('pemilikUMKM.blog', compact('blogs'));
+        $id = auth()->guard('admin')->user()->vendorId;
+        $blogs = Blogs::where('vendorId', $id)->paginate(12);
+        $dashboard = Dashboard::where('vendorId', $id)->get();
+        return view('pemilikUMKM.blog', compact('blogs', 'dashboard'));
     }
 
     public function create()
@@ -65,7 +62,7 @@ class BlogUMKMController extends Controller
             $imageName = $filenameUnik . '_' . time() . '.' . $extension; 
             Image::make($request->file('imagePath'))->resize(500, 700, function ($constraint) {
                 $constraint->aspectRatio();
-            })->save('storage/blogs/'.'/'.$imageName);
+            })->save('storage/blogs/'.$imageName);
             $blogs->imagePath = $imageName;
         } 
 

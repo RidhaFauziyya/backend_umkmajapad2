@@ -34,6 +34,7 @@
             <h3>Send Your Message!</h3>
                 <div class="box-send">
                     <form class="input-group">
+                    {{ csrf_field() }}
                         <input type="text" class="form-control form-control-sm" aria-describedby="basic-addon2" fdprocessedid="bidmgj">
                     </form>
                     <button class="btn-send" type="button">Send</button>
@@ -42,7 +43,6 @@
     </div> 
     <div class="box-credit">
         <p>UMKMAja!</p>
-        <div class="bi-dash-lg fa-2x"></div>
         <i class="fab fa-facebook fa-2x"></i>
         <i class="fab fa-instagram fa-2x"></i>
         <i class="fab fa-twitter fa-2x"></i>

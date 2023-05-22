@@ -16,6 +16,7 @@
 
     <!-- css link -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/lightbox.min.css')}}" rel="stylesheet">
     <style>
     body, html {
         height: 100%;
@@ -35,6 +36,7 @@
     <!-- Sript -->
     <script src="{{asset('js/dialog.js')}}"></script>
     <script src="{{asset('js/sidebar.js')}}"></script>
+    <script src="{{asset('js/lightbox-plus-jquery.min.js')}}"></script>
 
     <!-- footer awal -->
     @include('layouts.footer  ')

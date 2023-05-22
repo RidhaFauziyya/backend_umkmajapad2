@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="home-section">
-    <div class="text">I PRODUCT</div>
+    <div class="text product">PRODUCT</div>
     <div class="box-container">
     @if(!empty($product))
         @foreach($product as $pro)
@@ -12,12 +12,11 @@
             </div>
             <p class="title-product">{{$pro->productName}}</p>
             <p class="harga-product"><b>Rp {{$pro->productPrice}}</b></p>
-            <p class="desc-product"><b>{{$pro->description}}</b></p>
-            <div class="button-content">
+            <div class="button-content2">
                 <form action= "{{ route('product.destroy', $pro->id)}}" method="POST">@method('DELETE')
                     {{ csrf_field() }}
-                    <input type="hidden" name="id" value="{{$pro->id }}"> <br></br>
-                    <button type="submit" onclick="return confirm('Are You Sure You Want To Remove This Product?');" style="margin-bottom:5rem;"><i class='bx bx-trash'></i></button>
+                    <input type="hidden" name="id" value="{{$pro->id }}">
+                    <button type="submit" onclick="return confirm('Are You Sure You Want To Remove This Product?');"><i class='bx bx-trash'></i></button>
                 </form>
             </div>
         </div>

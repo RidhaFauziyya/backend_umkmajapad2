@@ -2,14 +2,14 @@
 
 @section('content')
 <section class="register">
+    <div class="title-dashboard">
+    @if ($message = Session::get('success'))
+            <div class="alert alert-success alert-block">
+                <h3 class="alertx">{{ $message }}</h3>
+            </div>
+        @endif
+    </div>
     <div class="container">
-        <div class="title-dashboard">
-        @if ($message = Session::get('success'))
-                <div class="alert alert-success alert-block">
-                    <h3 class="alertx">{{ $message }}</h3>
-                </div>
-            @endif
-        </div>
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card-auth">

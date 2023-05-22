@@ -68,7 +68,7 @@ class MyStoreController extends Controller
             $imageName = $filenameUnik . '_' . time() . '.' . $extension; 
             Image::make($request->file('imagePath'))->resize(500, 500, function ($constraint) {
                 $constraint->aspectRatio();
-            })->save('storage/dashboard/'.'/'.$imageName);
+            })->save('storage/dashboard/'.$imageName);
             $dashboard->imagePath = $imageName;
         } 
 

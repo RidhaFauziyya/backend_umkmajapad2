@@ -8,9 +8,16 @@
     <ul class="nav-list">
       <li class="store-list">
         <a href="/dashboard">
-        <img class="img img-profile" src="https://i.etsystatic.com/39180577/r/il/943566/4432680343/il_fullxfull.4432680343_9tjj.jpg" alt="ini-gambar">
-          <span class="links_name store">Store Name</span>
-         <span class="tooltip">Store Name</span>
+          @if(!empty($dashboard))
+            @foreach($dashboard as $das)
+            <img class="img dash-profile img-profile" src="{{ asset ('storage/dashboard/'.$das->imagePath) }}" alt="ini-gambar">
+            @endforeach
+          @else
+          <img class="img dash-profile img-profile" src="https://i.etsystatic.com/39180577/r/il/943566/4432680343/il_fullxfull.4432680343_9tjj.jpg" alt="ini-gambar">
+          @endif
+        <span class="links_name store">{{Auth::guard('admin')->user()->name}}</span>
+        <span class="tooltip">{{Auth::guard('admin')->user()->name}}</span>
+
         </a>
       </li>
       <li class="list-side">
@@ -41,8 +48,10 @@
        </a>
        <span class="tooltip">Blog</span>
      </li>
+     <a href="{{ url('/logout') }}">
      <li class="button-side">
-     <a class="btn btn-logout" href="{{ url('/logout') }}"><button class="btn btn-logout">LOGOUT</button></a>
+      <button class="btn btn-logout">LOGOUT</button>
      </li>
+     </a>
     </ul>
 </div>

@@ -2,24 +2,29 @@
 
 @section('content')
 <section class="login">
+    <div class="title-dashboard">
+        @if ($message = Session::get('regist'))
+            <div class="alert alert-success alert-block">
+                <h3 class="alertx">{{ $message }}</h3>
+            </div>
+        @endif
+        @if ($message = Session::get('false'))
+            <div class="alert alert-danger alert-block">
+                <h3 class="alertx">{{ $message }}</h3>
+            </div>
+        @endif
+        @if ($message = Session::get('berhasil'))
+            <div class="alert alert-danger alert-block">
+                <h3 class="alertx">{{ $message }}</h3>
+            </div>
+        @endif
+        @if (session('error'))
+            <div class="alert alert-danger alert-block">
+                {{ session('error') }}
+            </div>
+        @endif
+    </div>
     <div class="container">
-        <div class="title-dashboard">
-            @if ($message = Session::get('regist'))
-                <div class="alert alert-success alert-block">
-                    <h3 class="alertx">{{ $message }}</h3>
-                </div>
-            @endif
-            @if ($message = Session::get('false'))
-                <div class="alert alert-danger alert-block">
-                    <h3 class="alertx">{{ $message }}</h3>
-                </div>
-            @endif
-            @if ($message = Session::get('berhasil'))
-                <div class="alert alert-danger alert-block">
-                    <h3 class="alertx">{{ $message }}</h3>
-                </div>
-            @endif
-        </div>
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card-auth">
