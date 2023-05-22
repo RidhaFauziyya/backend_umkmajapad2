@@ -40,7 +40,11 @@
                                 <option value="clothes">Clothes</option>
                                 <option value="electronic">Electronic</option>
                                 <option value="food&drink">Food&Drink</option>
+<<<<<<< HEAD
                                 <option value="furniture">Furniture</option>
+=======
+                                <option value="furniture">Food&Drink</option>
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176
                                 <option value="webinar">Webinar</option>
                                 <option value="bazar">Bazar</option>
                             </select>

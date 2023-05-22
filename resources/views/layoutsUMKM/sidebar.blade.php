@@ -8,6 +8,7 @@
     <ul class="nav-list">
       <li class="store-list">
         <a href="/dashboard">
+<<<<<<< HEAD
           @if(!empty($dashboard))
             @foreach($dashboard as $das)
             <img class="img dash-profile img-profile" src="{{ asset ('storage/dashboard/'.$das->imagePath) }}" alt="ini-gambar">
@@ -18,6 +19,13 @@
         <span class="links_name store">{{Auth::guard('admin')->user()->name}}</span>
         <span class="tooltip">{{Auth::guard('admin')->user()->name}}</span>
 
+=======
+        @foreach($dashboard as $dashboards)
+        <img class="img dash-profile img-profile" src="{{ asset ('storage/dashboard/'.$dashboards->imagePath) }}" alt="ini-gambar">
+        <span class="links_name store">{{$dashboards->storeName}}</span>
+        <span class="tooltip">{{$dashboards->storeName}}</span>
+         @endforeach
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176
         </a>
       </li>
       <li class="list-side">

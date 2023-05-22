@@ -15,7 +15,11 @@
             <div class="button-content2">
                 <form action= "{{ route('product.destroy', $pro->id)}}" method="POST">@method('DELETE')
                     {{ csrf_field() }}
+<<<<<<< HEAD
                     <input type="hidden" name="id" value="{{$pro->id }}">
+=======
+                    <input type="hidden" name="id" value="{{$pro->id }}"> <br></br>
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176
                     <button type="submit" onclick="return confirm('Are You Sure You Want To Remove This Product?');"><i class='bx bx-trash'></i></button>
                 </form>
             </div>

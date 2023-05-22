@@ -74,5 +74,9 @@ class StoreAdminController extends Controller
         );
         return view('stores.store-details.store-detail')->with($data);
     }
+<<<<<<< HEAD
 
 }
+=======
+}
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176

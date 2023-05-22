@@ -724,6 +724,7 @@ width: 85rem;
     margin-left: 0.5rem;
 }
 
+<<<<<<< HEAD
 .store-page .box-container{
   flex-wrap: wrap;
 }
@@ -731,6 +732,10 @@ width: 85rem;
 .product-store .box-container{
   flex-wrap: wrap;
   justify-content: space-between;
+=======
+.desc-product{
+  margin-left: 0.5rem;
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176
 }
 
 /* End Store  */
@@ -1170,8 +1175,11 @@ width: 85rem;
     font-size: 1.5rem;
     display: flex;
     justify-content: end;
+<<<<<<< HEAD
     margin-top: 2rem;
     margin-right: 2rem;
+=======
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176
   }
 
 

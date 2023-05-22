@@ -19,4 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+<<<<<<< HEAD
 Route::apiResource('dashboards', DashboardUMKMController::class);
+=======
+Route::apiResource('dashboards', DashboardUMKMController::class);
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176

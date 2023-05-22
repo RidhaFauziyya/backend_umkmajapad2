@@ -13,4 +13,8 @@ class SideBarController extends Controller
         $dashboard = Dashboard::where('vendorId', $id)->get();
         return view('layoutsUMKM.sidebar', compact('dashboard'));
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176

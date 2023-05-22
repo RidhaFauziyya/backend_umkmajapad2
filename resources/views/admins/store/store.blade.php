@@ -45,6 +45,7 @@
                 <td>{{$store->updated_at}}</td>
                 <td class="action">
                     <div class="action-flex">
+<<<<<<< HEAD
                         @if (($store->category) == "Food&Drink")
                         <a href="/food-store/{{$store->id}}"><i class='bx bx-right-arrow-circle'></i></a>
                         @elseif (($store->category) == "Art")
@@ -61,6 +62,9 @@
                         <a href="/other-store/{{$store->id}}"><i class='bx bx-right-arrow-circle'></i></a>
                         @endif
                        
+=======
+                    <a href="/store-details/{{$store->id}}"><i class='bx bx-right-arrow-circle'></i></a>
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176
                     </div>
                 </td>
                 

@@ -24,6 +24,7 @@
             @endforeach
         @endif
         @if(count($blogs)==0)
+<<<<<<< HEAD
             <div class="store-homepage box">
                 <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
             </div>
@@ -37,6 +38,18 @@
             <div class="store-homepage box">
                 <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
             </div>
+=======
+                <div class="box">
+                    <img class="image" alt="iniGambar" src="https://www.pa4.com.br/wp-content/uploads/2021/08/WhatsApp-Image-2021-08-24-at-16.20.03.jpeg">
+                </div>
+                <div class="box">
+                    <img class="image" alt="iniGambar" src="https://bua.ub.ac.id/wp-content/uploads/2018/02/Banner-Pameran-Februari-6kali3-1024x512.jpg">
+                </div>
+                <div class="box">
+                    <img class="image" alt="iniGambar" src="http://www.umm.ac.id/files/image/Bazar%20Buku.jpg">
+                </div>
+            </div>
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176
         @endif
         </div>
         <div class="more">
@@ -53,6 +66,7 @@
                 <img class="image" alt="iniGambar" src="{{ asset ('storage/dashboard/'.$stores->imagePath) }}">
             </div>
             @endforeach
+<<<<<<< HEAD
         @endif
         @if(count($store)==0)
             <div class="store-homepage box">
@@ -68,6 +82,20 @@
                 <img class="image" alt="iniGambar" src="{{ asset('/storage/store.jpg')}}">
             </div>
         @endif
+=======
+        @endif
+        @if(count($store)==0)
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/store-logo-design-template-3ac57f780d1cae2a6d3a049f82c62437_screen.jpg?ts=1646205211">
+            </div>
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30142254/125-768x591.png">
+            </div>
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="https://www.logolynx.com/images/logolynx/55/5513135efd5feb51500074c68b2b32d5.jpeg">
+            </div>
+        @endif
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176
         </div>
         <div class="more">
             <a href="/stores" ><i class="fas fa-arrow-right fa-2x"></i></a>

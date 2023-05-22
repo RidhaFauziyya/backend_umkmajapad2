@@ -114,6 +114,7 @@ Route::get('/other-store/{id}', [App\Http\Controllers\StoreController::class, 's
 Route::get('/send', [App\Http\Controllers\HomeController::class, 'send'])->name('send.message');
 
 //Route Halaman Blog Detail
+<<<<<<< HEAD
 Route::get('/store-details/{id}', [App\Http\Controllers\StoreAdminController::class, 'show']);
 Auth::routes();
 
@@ -125,3 +126,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+=======
+Route::get('/store-details/{id}', [App\Http\Controllers\StoreAdminController::class, 'show']);
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176
