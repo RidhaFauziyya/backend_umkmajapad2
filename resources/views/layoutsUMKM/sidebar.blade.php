@@ -8,6 +8,7 @@
     <ul class="nav-list">
       <li class="store-list">
         <a href="/dashboard">
+<<<<<<< HEAD
           @if(count($dashboard)==0)
             <img class="img dash-profile img-profile" src="https://i.etsystatic.com/39180577/r/il/943566/4432680343/il_fullxfull.4432680343_9tjj.jpg" alt="ini-gambar">
           @else
@@ -17,6 +18,26 @@
           @endif
           <span class="links_name store">{{Auth::guard('admin')->user()->name}}</span>
           <span class="tooltip">{{Auth::guard('admin')->user()->name}}</span>
+=======
+<<<<<<< HEAD
+          @if(!empty($dashboard))
+            @foreach($dashboard as $das)
+            <img class="img dash-profile img-profile" src="{{ asset ('storage/dashboard/'.$das->imagePath) }}" alt="ini-gambar">
+            @endforeach
+          @else
+          <img class="img dash-profile img-profile" src="https://i.etsystatic.com/39180577/r/il/943566/4432680343/il_fullxfull.4432680343_9tjj.jpg" alt="ini-gambar">
+          @endif
+        <span class="links_name store">{{Auth::guard('admin')->user()->name}}</span>
+        <span class="tooltip">{{Auth::guard('admin')->user()->name}}</span>
+
+=======
+        @foreach($dashboard as $dashboards)
+        <img class="img dash-profile img-profile" src="{{ asset ('storage/dashboard/'.$dashboards->imagePath) }}" alt="ini-gambar">
+        <span class="links_name store">{{$dashboards->storeName}}</span>
+        <span class="tooltip">{{$dashboards->storeName}}</span>
+         @endforeach
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176
+>>>>>>> 6875360cd66618fd3f8a84256dac67dbd96c98be
         </a>
       </li>
       <li class="list-side">

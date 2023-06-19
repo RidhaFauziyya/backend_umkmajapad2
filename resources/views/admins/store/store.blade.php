@@ -44,6 +44,10 @@
                 <td>{{$store->last_login_at}}</td>
                 <td class="action">
                     <div class="action-flex">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6875360cd66618fd3f8a84256dac67dbd96c98be
                         @if (($store->category) == "Food&Drink")
                         <a href="/food-store/{{$store->id}}"><i class='bx bx-right-arrow-circle'></i></a>
                         @elseif (($store->category) == "Art")
@@ -59,10 +63,35 @@
                         @else
                         <a href="/other-store/{{$store->id}}"><i class='bx bx-right-arrow-circle'></i></a>
                         @endif
+<<<<<<< HEAD
                     </div>
                 </td>
             </tr>   
         @endforeach
+=======
+                       
+=======
+                    <a href="/store-details/{{$store->id}}"><i class='bx bx-right-arrow-circle'></i></a>
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176
+                    </div>
+                </td>
+                
+            </tr>
+            @endforeach
+            @else
+            <tr>
+                <td class="no">1</td>
+                <td>Store Name</td>
+                <td>22-02-2023</td>
+                <td class="action">
+                    <div class="action-flex">
+                        <a href="#"><i class='bx bx-trash'></i></a>
+                        <a href="#"><i class='bx bx-right-arrow-circle'></i></a>
+                    </div>
+                </td>
+            </tr>
+            @endif
+>>>>>>> 6875360cd66618fd3f8a84256dac67dbd96c98be
         </table>
         @else
         <div class="store-box3 widht-full">

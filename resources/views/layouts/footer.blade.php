@@ -42,6 +42,15 @@
             </div>
         </div>
     </div> 
+<<<<<<< HEAD
     
+=======
+    <div class="box-credit">
+        <p>UMKMAja!</p>
+        <i class="fab fa-facebook fa-2x"></i>
+        <i class="fab fa-instagram fa-2x"></i>
+        <i class="fab fa-twitter fa-2x"></i>
+    </div>
+>>>>>>> 6875360cd66618fd3f8a84256dac67dbd96c98be
 </section>
 <!--END FOOTER-->

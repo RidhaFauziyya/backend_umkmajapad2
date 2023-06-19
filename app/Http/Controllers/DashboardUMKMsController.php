@@ -144,7 +144,13 @@ class DashboardUMKMsController extends Controller
                 $dashboard->imagePath = $imageName;
             }
         } 
+<<<<<<< HEAD:app/Http/Controllers/DashboardUMKMsController.php
         $dashboard->update();
         return redirect('/myStore')->with(['success' => 'Store Detail updated successfully!']);
+=======
+
+        $dashboard->update();
+        return redirect('/myStore')->with(['success' => 'Store Detail update successfully!']);
+>>>>>>> 6875360cd66618fd3f8a84256dac67dbd96c98be:app/Http/Controllers/DashboardUMKMController.php
     }
 }

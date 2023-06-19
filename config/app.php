@@ -176,8 +176,13 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+<<<<<<< HEAD
         Intervention\Image\ImageServiceProvider::class
         
+=======
+        Intervention\Image\ImageServiceProvider::class,
+        Cog\Laravel\Ban\Providers\BanServiceProvider::class,
+>>>>>>> 6875360cd66618fd3f8a84256dac67dbd96c98be
     ],
 
     /*

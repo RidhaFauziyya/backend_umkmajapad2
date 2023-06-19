@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @extends('layoutsUMKM.app2')
+=======
+@extends('layoutsUMKM.app')
+>>>>>>> 6875360cd66618fd3f8a84256dac67dbd96c98be
 
 @section('content')
 <section class="home-section plus-bottom1">

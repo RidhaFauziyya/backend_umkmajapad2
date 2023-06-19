@@ -73,4 +73,9 @@ class StoreAdminController extends Controller
             return response()->json($data, 200);
         }
     }
+<<<<<<< HEAD
+
 }
+=======
+}
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176

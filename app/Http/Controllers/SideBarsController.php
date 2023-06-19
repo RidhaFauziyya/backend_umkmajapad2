@@ -12,6 +12,7 @@ class SideBarsController extends Controller
         $dashboard = Dashboard::where('vendorId', $id)->get();
         return view('layoutsUMKM.sidebar', compact('dashboard'));
     }
+<<<<<<< HEAD:app/Http/Controllers/SideBarsController.php
 
     public function index2()
     {
@@ -19,4 +20,10 @@ class SideBarsController extends Controller
         $dashboard = Dashboard::where('vendorId', $id)->get();
         return view('layoutsUMKM.sidebar2', compact('dashboard'));
     }
+=======
+<<<<<<< HEAD
+>>>>>>> 6875360cd66618fd3f8a84256dac67dbd96c98be:app/Http/Controllers/SideBarController.php
 }
+=======
+}
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176

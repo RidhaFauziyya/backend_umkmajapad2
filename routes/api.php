@@ -58,3 +58,11 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('mystore/edit/{id}', [MyStoreController::class, 'update']);
 });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+Route::apiResource('dashboards', DashboardUMKMController::class);
+=======
+Route::apiResource('dashboards', DashboardUMKMController::class);
+>>>>>>> ca60b13a77d2250c8df34dac0d607288e2eec176
+>>>>>>> 6875360cd66618fd3f8a84256dac67dbd96c98be

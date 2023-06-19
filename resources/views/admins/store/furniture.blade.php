@@ -30,18 +30,28 @@
                 <th>Latest Activity</th>
                 <th class="action">Action</th>
             </tr>
+<<<<<<< HEAD
             @foreach ($data as $store)
+=======
+            
+            @if(count($data)>0)
+                @foreach ($data as $store)
+>>>>>>> 6875360cd66618fd3f8a84256dac67dbd96c98be
             <tr>
                 <td class="no">{{$loop->iteration}}</td>
                 <td>{{$store->storeName}}</td>
                 <td>{{$store->last_login_at}}</td>
                 <td class="action">
                     <div class="action-flex">
+<<<<<<< HEAD
                     <form action= "{{ route('storeAdmin.destroy', $store->id)}}" method="POST">@method('DELETE')
                         {{ csrf_field() }}
                         <input type="hidden" name="id" value="{{$store->id }}">
                         <button type="submit" onclick="return confirm('Are You Sure You Want To Remove This Store?');"><i class='bx bx-trash'></i></button>
                         </form>
+=======
+                        <a href="#"><i class='bx bx-trash'></i></a>
+>>>>>>> 6875360cd66618fd3f8a84256dac67dbd96c98be
                         <a href="/furniture-store/{{$store->id}}"><i class='bx bx-right-arrow-circle'></i></a>
                     </div>
                 </td>

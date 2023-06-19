@@ -37,8 +37,12 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+<<<<<<< HEAD
         // $this->middleware('guest')->except('logout');
         $this->middleware('guest:admin')->except('logout');
+=======
+        $this->middleware('guest')->except('logout');
+>>>>>>> 6875360cd66618fd3f8a84256dac67dbd96c98be
     }
 
     function authenticated(Request $request, $user)

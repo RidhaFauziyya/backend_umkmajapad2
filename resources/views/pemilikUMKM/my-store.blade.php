@@ -28,6 +28,10 @@
                 </div>
                 @endforeach
             @endif
+<<<<<<< HEAD
+=======
+        @foreach($users as $user)
+>>>>>>> 6875360cd66618fd3f8a84256dac67dbd96c98be
         <div class="grid grid-account">
             <div class="text-in">Account Detail</div>
             <hr class="line-style">
