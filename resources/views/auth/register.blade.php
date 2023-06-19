@@ -3,11 +3,11 @@
 @section('content')
 <section class="register">
     <div class="title-dashboard">
-        @if ($message = Session::get('success'))
-                <div class="alert alert-success alert-block">
-                    <h3 class="alertx">{{ $message }}</h3>
-                </div>
-            @endif
+    @if ($message = Session::get('success'))
+            <div class="alert alert-success alert-block">
+                <h3 class="alertx">{{ $message }}</h3>
+            </div>
+        @endif
     </div>
     <div class="container">
         <div class="row justify-content-center">
@@ -22,6 +22,7 @@
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <input id="name" type="text" class="form-content @error('name') is-invalid @enderror" name="name" placeholder="Store Name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
                                             @error('name')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>

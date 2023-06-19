@@ -54,7 +54,7 @@
         @if(count($dashboard)>0)
             <div class="store-box2">
                 <div class="box-container">
-                @foreach($dashboard as $dashboards)
+            @foreach($dashboard as $dashboards)
                     <a href="/art-store/{{$dashboards->id}}">
                     <div class="store-card card">
                         <div class="box-store box">
@@ -63,7 +63,7 @@
                         <p class="title">{{$dashboards->storeName}}</p>
                         <p>{{substr($dashboards->desc,0,50)}}</p>
                     </div></a>
-                @endforeach
+            @endforeach 
                 </div>
                 <div class="container text-center">
                     <div class="d-flex justify-content-center" >

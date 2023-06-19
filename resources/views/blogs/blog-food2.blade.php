@@ -6,7 +6,7 @@
     <div class="cate-blog">
         <a href="/art">Art</a>
         <a href="/bazar">Bazar</a>
-        <a href="/beauty&health">Beauty&Health</a>
+        <a href="/beauty">Beauty&Health</a>
         <a href="/clothes">Clothes</a>
     </div>
     <div class="cate-blog">
@@ -36,7 +36,7 @@
             @endforeach 
         @else
         </div>
-            <div class="store-box3 widht-full">
+           <div class="store-box3 widht-full">
                 <div class="alert alert-block">
                     <h3>Content not available yet</h3>
                 </div>

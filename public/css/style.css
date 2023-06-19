@@ -245,6 +245,14 @@ img {
     text-decoration: none;
 }
 
+.header .dropdown{
+  margin-right: 5rem;
+}
+
+.dropdown-menu {
+  min-width: none;
+}
+
 .dropdown-toggle{
   background: none;
   color: var(--white);
@@ -580,14 +588,16 @@ width: 85rem;
 }
 
 .box-left{
-    height: 400px;
     background-color: var(--footer-color);
 }
 
 
 .box-right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     background-color: var(--bg-form);
-    height: 400px;
 }
 
 .aboutus p{
@@ -722,10 +732,6 @@ width: 85rem;
 
 .harga-product{
     margin-left: 0.5rem;
-}
-
-.desc-product{
-  margin-left: 0.5rem;
 }
 
 .store-page .box-container{
@@ -1420,20 +1426,25 @@ textarea.form-control{
  }
   
 .footer .box-container {
-display: grid;
-grid-template-columns: 25% 25% 50%;
-padding-left: 1rem;
+display: flex;
 /* gap => memberikan jarak antar kolom yang telah dibagi */
-gap: 3rem;
+gap: 8rem;
+margin-right: 2rem;
 }
 
 .footer .logo{
-height: 70px;
-width: 180px;
+  height: 140px;
+  width: 280px;
 }
 
+.container-footer{
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem;
+}
+
+
 .box-footer {
-width: 100%;
 height: fit-content;
 margin-top: 1rem;
 margin-bottom: 0.6rem;
@@ -1452,9 +1463,10 @@ gap: 0.7rem;
 
 .box-credit{
 display: flex;
-justify-content: flex-end;
+justify-content: flex-start;
 gap: 1.5rem;
 text-align: right;
+margin-bottom: 2rem;
 }
 
 .footer .box-container .sample h3 {
@@ -1528,6 +1540,7 @@ margin-top: 10px;
 }
 
 .alert{
+  position: inherit;
   background-color: var(--footer-color);
 }
 
@@ -1572,8 +1585,69 @@ margin-top: 10px;
 /* Header */
 
 /* End Header */
+@media (max-width: 1330px)
+{
 
-@media (max-width: 768px)
+  /* Home */
+  .box-contain .box-container{
+    justify-content: center;
+  }
+
+  .box-contain .banner {
+    width: 300px;
+    height: 300px;
+  }
+
+  .box-contain h2 {
+    font-size: medium;
+    margin-bottom: 1rem;
+  }
+
+  /* Footer */
+  .footer .box-container {
+    gap: 5rem;
+    }
+
+
+  /* Blog */
+  .blog-card{
+    width: 250px;
+  }
+
+  .info-blog {
+    grid-template-columns: 13% 4% 20%;
+  }
+
+  /* Store */
+  .store-page .store-card {
+    width: 220px;
+  }
+
+  .store-box2 {
+    padding-right: 2rem;
+  }
+
+  .product-store .box-container {
+    gap: 1rem;
+  }
+
+  /* About Us */
+
+  /* My Store UMK */
+  .text-content.height {
+    min-height: 700px;
+  }
+
+  /* Product UMKM */
+  .box-container {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+}
+
+@media (max-width: 870px)
 {
 /* Home */
 .box-container{
@@ -1627,26 +1701,25 @@ margin-top: 10px;
 }
 
 /* Footer */
-.footer .box-container{
-  grid-template-columns: 40% 40%;
+.container-footer {
+  flex-wrap: wrap;
 }
 
-.box-send .input-group {
-  width: 130px;
+.footer .box-container {
+  justify-content: flex-start;
+  margin-left: 1rem;
 }
 
-.box-send {
-  gap: 3.5rem;
-}
-
-.box-credit{
-  margin-right: 1rem;
-}
 
 /* BLOG */
 
 .store-box3{
   padding-right: 0;
+}
+
+.blog .container-home{
+  padding: 0 !important;
+  justify-content: center;
 }
 
 /* ABOUT-US */
@@ -1689,6 +1762,7 @@ margin-top: 10px;
   display: grid;
   gap: 1.3rem;
   grid-template-columns: 50% 50%;
+  justify-items: center;
 }
 
 .blog-card{
@@ -1701,7 +1775,7 @@ margin-top: 10px;
 }
 
 .info-blog{
-  grid-template-columns: 15% 4% 20%
+  grid-template-columns: 15% 6% 20%
 }
 
 /* DASH ADMIN */
@@ -1823,30 +1897,23 @@ table{
   }
 
   /* FOOTER */
-  .footer .box-container{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 1rem;
+  .container-footer {
+    margin: 1rem;
   }
+
+  .footer .logo {
+    height: 120px;
+    width: 240px;
+}
 
   .sample h3{
     font-size: 1rem !important;
   }
 
-  .box-send{
-    gap: 4rem;
+  .footer .box-container {
+    gap: 3rem;
   }
 
-  .box-credit{
-    font-size: x-small;
-    gap: 0.8rem;
-    justify-content: flex-start;
-    margin-left: 1rem;
-  }
-  .box-credit .fab{
-    margin-top: 0.8rem;
-  }
 
   /* BLOG */
   .cate-blog{
@@ -1900,8 +1967,8 @@ table{
   }
 
   /* ABOUT US */
-  .box-right{
-    height: auto;
+  .aboutus p{
+    font-size: smaller;
   }
 
   /* FORM LOGIN */

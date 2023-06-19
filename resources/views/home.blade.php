@@ -8,7 +8,7 @@
             <div class="content">
                 <h2>500++</h2>
                 <h3>UMKM HAS JOINED WITH US</h3>
-                <a href="{{ route('register') }}" class="center"><button class="btn-regist">JOIN US NOW!</button></a>
+                <a href="/register" class="center"><button class="btn-regist">JOIN US NOW!</button></a>
             </div>
         </div> 
     </div>
@@ -24,18 +24,19 @@
             @endforeach
         @endif
         @if(count($blogs)==0)
-                <div class="store-homepage box">
-                    <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
-                </div>
-                <div class="store-homepage box">
-                    <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
-                </div>
-                <div class="store-homepage box">
-                    <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
-                </div>
-                <div class="store-homepage box">
-                    <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
-                </div>
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
+            </div>
+
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
+            </div>
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
+            </div>
+            <div class="store-homepage box">
+                <img class="image" alt="iniGambar" src="{{ asset('/storage/blogs.jpg')}}">
+            </div>
         @endif
         </div>
         <div class="more">

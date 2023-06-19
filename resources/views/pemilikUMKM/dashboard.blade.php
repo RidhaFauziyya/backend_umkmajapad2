@@ -10,7 +10,7 @@
             <hr class="line-style">
             @foreach($dashboard as $dashboards)
             <div class="profile">
-                <img class="img dash-profile img-profile" src="{{ asset ('storage/dashboard/'.$dashboards->imagePath) }}" alt="ini-gambar">    
+                <img class="img dash-profile img-profile" src="{{ asset ('storage/dashboard/'.$dashboards->imagePath) }}" alt="ini-gambar">
             </div>
             <div class="content-profile">
                 <p class="sub-title">Store Name</p>

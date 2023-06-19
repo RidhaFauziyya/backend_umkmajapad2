@@ -1,4 +1,4 @@
-@extends('layoutsUMKM.app')
+@extends('layoutsUMKM.app2')
 
 @section('content')
 <section class="home-section plus-bottom1">

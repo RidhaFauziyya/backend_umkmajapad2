@@ -19,15 +19,15 @@
     @endif
     <div class="text">MY STORE</div>
     <div class="grid-dash">
-        @if(!empty($dashboard))
-            @foreach($dashboard as $dashboards)
+            @if(!empty($dashboard))
+                @foreach($dashboard as $dashboards)
                 <div class="grid grid-image">
                     <div class="profile">
                         <img class="img dash-profile img-profile" src="{{ asset ('storage/dashboard/'.$dashboards->imagePath) }}" alt="ini-gambar">
                     </div>
                 </div>
-            @endforeach
-        @endif
+                @endforeach
+            @endif
         <div class="grid grid-account">
             <div class="text-in">Account Detail</div>
             <hr class="line-style">
@@ -107,7 +107,7 @@
             @if(count($dashboard)==0)
             <div class="grid grid-image">
                 <div class="profile">
-                    <img class="img dash-profile img-profile" src="https://i.etsystatic.com/39180577/r/il/943566/4432680343/il_fullxfull.4432680343_9tjj.jpg" alt="ini-gambar"> 
+                    <img class="img dash-profile img-profile" src="{{ asset ('storage/store.jpg') }}" alt="ini-gambar">
                 </div>
                 <div class="button-content">
                     <a href="/myStore/create"><i class='bx bx-plus'></i></a>

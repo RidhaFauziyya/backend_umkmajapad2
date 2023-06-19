@@ -11,7 +11,7 @@
                 <p class="content">{{$blog->created_at->toDateString()}}</p>
             </div>
             <div class="right-flex">
-                <a href="/blog-details/{{$blog->id}}"><i class='bx bx-right-arrow-circle'></i></a>
+                <a href="/blog"><i class='bx bx-right-arrow-circle'></i></a>
                 <form action= "{{ route('blogAdmin.destroy', $blog->id)}}" method="POST">@method('DELETE')
                     {{ csrf_field() }}
                     <input type="hidden" name="id" value="{{$blog->id }}">

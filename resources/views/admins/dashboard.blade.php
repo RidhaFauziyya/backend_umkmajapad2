@@ -24,11 +24,11 @@
             </div>
             <div class="content-profile">
                 <p class="sub-title">Reset Your Password</p>
-                    <div>
-                        <a href="/password/reset/"><button type="button" class="btn-form btn">Reset Password</button></a>
-                    </div>
-            <br>
+                <div>
+                    <a href="/password/reset/"><button type="button" class="btn-form btn">Reset Password</button></a>
+                </div>
             </div>
+            <br>
         </div>
         <div class="grid grid-product">
             <div class="text-in">STORE</div>

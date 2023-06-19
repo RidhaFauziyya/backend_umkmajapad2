@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="home-section">
-    <div class="text">PRODUCT</div>
+    <div class="text product">PRODUCT</div>
     <div class="box-container">
     @if(!empty($product))
         @foreach($product as $pro)
@@ -12,7 +12,6 @@
             </div>
             <p class="title-product">{{$pro->productName}}</p>
             <p class="harga-product"><b>Rp {{$pro->productPrice}}</b></p>
-            <p class="desc-product"><b>{{$pro->description}}</b></p>
             <div class="button-content2">
                 <form action= "{{ route('product.destroy', $pro->id)}}" method="POST">@method('DELETE')
                     {{ csrf_field() }}

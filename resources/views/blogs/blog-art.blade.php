@@ -6,7 +6,7 @@
     <div class="cate-blog">
         <a href="/art" class="active">Art</a>
         <a href="/bazar">Bazar</a>
-        <a href="/beauty&health">Beauty&Health</a>
+        <a href="/beauty">Beauty&Health</a>
         <a href="/clothes">Clothes</a>
     </div>
     <div class="cate-blog">
@@ -15,7 +15,7 @@
         <a href="/furniture">Furniture</a>
         <a href="/webinar">Webinar</a>
     </div>
-    <br><br><br> 
+    <br><br><br>
     <div class="container-home blogs">
         <div class="box-container">
         @if(count($blogs)>0)

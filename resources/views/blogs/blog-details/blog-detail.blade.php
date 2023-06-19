@@ -13,8 +13,7 @@
         <a class="example-image-link" href="{{asset('storage/blogs/'. $blogs->imagePath)}}"
             data-lightbox="example-2" data-title="{{$blogs->contentTitle}}">
                 <img class="img-blog example-image img-fluid mb-2"
-                src="{{asset('storage/blogs/'. $blogs->imagePath)}}" alt="image-1">
-        </a>
+                src="{{asset('storage/blogs/'. $blogs->imagePath)}}" alt="image-1"></a>
     </div>
 
     <div class="contain-blog">

@@ -71,11 +71,7 @@ class DashboardUMKMsController extends Controller
         } 
 
         $dashboard->save();
-        if (!$dashboard){
-            return response()->json("Error Saving", 500);
-        } else{
-            return response()->json($dashboard, 201);
-        }
+        return redirect('/myStore')->with(['success' => 'Store Detail created successfully!']);
     }
 
     public function show($id)
@@ -148,12 +144,7 @@ class DashboardUMKMsController extends Controller
                 $dashboard->imagePath = $imageName;
             }
         } 
-
         $dashboard->update();
-        if (!$dashboard){
-            return response()->json("Error Saving", 500);
-        } else{
-            return response()->json($dashboard, 201);
-        }
+        return redirect('/myStore')->with(['success' => 'Store Detail updated successfully!']);
     }
 }

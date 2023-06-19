@@ -22,7 +22,7 @@ class MyStoresController extends Controller
     public function create()
     {
         $dashboard = Dashboard::all();
-        return view('form-input.form-store-detail', ['dashboard' => $dashboard]);
+        return view('form-input.form-store-detail');
     }
 
     public function store(Request $request)

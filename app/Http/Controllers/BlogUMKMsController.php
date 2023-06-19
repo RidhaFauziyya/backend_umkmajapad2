@@ -67,11 +67,7 @@ class BlogUMKMsController extends Controller
         } 
 
         $blogs->save();
-        if (!$blogs){
-            return response()->json("Error Saving", 500);
-        } else{
-            return response()->json($blogs, 201);
-        }
+        return redirect('/blogUMKM')->with(['success' => 'Content uploaded successfully']);
     }
 
     /**

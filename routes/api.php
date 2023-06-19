@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\BlogAdminController;
 use App\Http\Controllers\Api\BlogUMKMController;
 use App\Http\Controllers\Api\MyStoreController;
 use App\Http\Controllers\Api\UMKMController;
+use App\Http\Controllers\Api\StoreAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,16 @@ Route::post('login', [AuthController::class, 'login']);
 
 Route::get('product', [ProductController::class, 'index']);
 Route::get('blogAdmin', [BlogAdminController::class, 'index']);
+
+Route::get('storeAdmin/food', [StoreAdminController::class, 'index']);
+Route::get('storeAdmin/art', [StoreAdminController::class, 'art']);
+Route::get('storeAdmin/beauty', [StoreAdminController::class, 'beauty']);
+Route::get('storeAdmin/clothes', [StoreAdminController::class, 'clothes']);
+Route::get('storeAdmin/electronic', [StoreAdminController::class, 'electronic']);
+Route::get('storeAdmin/furniture', [StoreAdminController::class, 'furniture']);
+Route::get('storeAdmin/other', [StoreAdminController::class, 'other']);
+Route::get('storeAdmin/details/{id}', [StoreAdminController::class, 'show']);
+
 
 Route::get('blog-details/{id}', [BlogAdminController::class, 'show']);
 
@@ -46,3 +57,4 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('mystore/create', [MyStoreController::class, 'store']);
     Route::post('mystore/edit/{id}', [MyStoreController::class, 'update']);
 });
+
